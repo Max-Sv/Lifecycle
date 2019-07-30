@@ -1,0 +1,44 @@
+<div class="input">
+  <form class="input__form">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter a name</mat-label>
+      <input matInput autocomplete="off" (keyup)="onKey($event)" />
+      <mat-hint>Name: {{ name }}</mat-hint>
+    </mat-form-field>
+  </form>
+  <div class="skill-1">
+    <span>{{ name }}'s Skill #1 value is {{ s1 }}</span>
+    <button mat-icon-button (click)="add(s1)">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button (click)="remove(s1)">
+      <mat-icon>
+        remove_circle_outline
+      </mat-icon>
+    </button>
+  </div>
+
+  <div class="skill-2">
+    <span>{{ name }}'s Skill #2 value is {{ s2 }}</span>
+    <button mat-icon-button (click)="add()">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button (click)="remove()">
+      <mat-icon>
+        remove_circle_outline
+      </mat-icon>
+    </button>
+  </div>
+
+  <div class="skill-3">
+    <span>{{ name }}'s Skill #3 value is {{ s3 }}</span>
+    <button mat-icon-button (click)="add()">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button (click)="remove()">
+      <mat-icon>
+        remove_circle_outline
+      </mat-icon>
+    </button>
+  </div>
+</div>
