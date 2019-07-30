@@ -1,11 +1,27 @@
 <main class="lifecycle">
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title>Lifecycle</mat-card-title>
+      <mat-card-title id="red">Lifecycle</mat-card-title>
       <mat-card-subtitle>angular</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <app-input></app-input>
+      <app-input (getName)="getName($event)"></app-input>
+      <app-skill1
+        [userName]="name"
+        [skill]="skill[0]"
+        (changeSkill)="changeSkill($event)"
+      ></app-skill1>
+      <app-skill2
+        [userName]="name"
+        [skill]="skill[1]"
+        (changeSkill)="changeSkill($event)"
+      ></app-skill2>
+      <app-skill3
+        [userName]="name"
+        [skill]="skill[2]"
+        (changeSkill)="changeSkill($event)"
+      ></app-skill3>
+      <div class="total">Total: {{ total }}</div>
     </mat-card-content>
   </mat-card>
 </main>
